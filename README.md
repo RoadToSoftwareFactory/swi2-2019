@@ -25,8 +25,8 @@ https://gitter.im/ManageIQ/welcome
 
 #### Spuštení virtualky na Mac v Q04 a Q12
 
-1. Stažení VirtualBox image ze stránek: akela.mendelu.cz/~xkoloma1/swi.ova 
-2. V nastaveni `VirtualBox -> Preferencies -> General -> Default Machine Folder` nastavit misto uživate `default` v ceste vas login (do vašeho pracovního adresare, například: ``/Users/xkoloma1/VirtualBox VMs)
+1. Stažení VirtualBox image ze stránek: http://akela.mendelu.cz/~xkoloma1/swi.ova 
+2. V nastaveni `VirtualBox -> Preferencies -> General -> Default Machine Folder` nastavit misto uživate `default` v ceste vas login (do vašeho pracovního adresare, například: `/Users/xkoloma1/VirtualBox VMs`)
 3. Postupujte podle webu: https://medium.com/@Aenon/mac-virtualbox-kernel-driver-error-df39e7e10cd8
     - `settings -> security and privacy > general`: pod hr allow permision to app (oracle vm corporate) 
 		- check box -> check
