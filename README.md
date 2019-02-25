@@ -6,7 +6,7 @@
 | Monday group        | Wendesday group          | Theme  |   Lecturer   |
 | ------------- |:-------------:| -----:| -----:|
 |  18.2   |  	20.2	  |   Development cycle	  |   Bohdan Iakymets  |
-|   25.2   |  	27.2	|   ORM	  |   Libor Pichler/Alexander Demicev   |
+|   25.2   |  	27.2	|   [ORM](http://foks.cz/swi/slides2019/orm/) 	  |   Libor Pichler/Alexander Demicev   |
 |  4.3	 |  6.3  |	SCRUM	  |  WIP    |
 11.3 |	13.3	| Manager position	| Jan Krocil
 18.3	| 20.3 |	UI	| Martin Hradil

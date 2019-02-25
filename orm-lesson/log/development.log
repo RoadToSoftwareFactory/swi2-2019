@@ -1,0 +1,455 @@
+  [1m[35m (662.0ms)[0m  [1m[35mCREATE DATABASE "orm-lesson_development" ENCODING = 'unicode'[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (510.7ms)[0m  [1m[35mCREATE DATABASE "orm-lesson_test" ENCODING = 'unicode'[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mAuthor Load (4.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (66.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (39.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1258211116271132415)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBooks (20190224181518)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (55.3ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "published_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190224181518_create_books.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190224181518"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAuthors (20190224181536)
+  [1m[35m (39.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190224181536_create_authors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190224181536"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-24 18:41:55.621519"], ["updated_at", "2019-02-24 18:41:55.621519"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1258211116271132415)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.9ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "First Author"], ["created_at", "2019-02-24 18:42:04.779942"], ["updated_at", "2019-02-24 18:42:04.779942"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Second Author"], ["created_at", "2019-02-24 18:42:04.822983"], ["updated_at", "2019-02-24 18:42:04.822983"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Third Author"], ["created_at", "2019-02-24 18:42:04.827299"], ["updated_at", "2019-02-24 18:42:04.827299"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.7ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "First Author"], ["created_at", "2019-02-24 18:42:19.933219"], ["updated_at", "2019-02-24 18:42:19.933219"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Second Author"], ["created_at", "2019-02-24 18:42:19.975599"], ["updated_at", "2019-02-24 18:42:19.975599"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Third Author"], ["created_at", "2019-02-24 18:42:19.979476"], ["updated_at", "2019-02-24 18:42:19.979476"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Load (39.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:12
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.8ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "First Author"], ["created_at", "2019-02-24 18:42:57.310067"], ["updated_at", "2019-02-24 18:42:57.310067"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Second Author"], ["created_at", "2019-02-24 18:42:57.352531"], ["updated_at", "2019-02-24 18:42:57.352531"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.2ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Third Author"], ["created_at", "2019-02-24 18:42:57.356097"], ["updated_at", "2019-02-24 18:42:57.356097"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:12
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "First Author"], ["created_at", "2019-02-24 18:43:22.533663"], ["updated_at", "2019-02-24 18:43:22.533663"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Second Author"], ["created_at", "2019-02-24 18:43:22.576197"], ["updated_at", "2019-02-24 18:43:22.576197"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Third Author"], ["created_at", "2019-02-24 18:43:22.580003"], ["updated_at", "2019-02-24 18:43:22.580003"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:12
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:13
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (280.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "orm-lesson_development"[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (217.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "orm-lesson_test"[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (580.2ms)[0m  [1m[35mCREATE DATABASE "orm-lesson_development" ENCODING = 'unicode'[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (474.8ms)[0m  [1m[35mCREATE DATABASE "orm-lesson_test" ENCODING = 'unicode'[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35mSQL (42.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "published_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190224181536)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190224181518);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-24 19:03:29.422978"], ["updated_at", "2019-02-24 19:03:29.422978"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "published_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190224181536)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190224181518);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-24 19:03:29.565917"], ["updated_at", "2019-02-24 19:03:29.565917"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (40.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-02-24 19:03:29.568707"], ["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "orm-lesson_development" ENCODING = 'unicode'[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "orm-lesson_test" ENCODING = 'unicode'[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (4.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "published_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "published_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-02-24 19:04:04.802351"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-02-24 19:04:04.805453"], ["key", "environment"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1258211116271132415)[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to AddAuthorToBooks (20190224190257)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (41.6ms)[0m  [1m[35mALTER TABLE "books" ADD "author_id" bigint[0m
+  ↳ db/migrate/20190224190257_add_author_to_books.rb:3
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_books_on_author_id" ON "books"  ("author_id")[0m
+  ↳ db/migrate/20190224190257_add_author_to_books.rb:3
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "books" ADD CONSTRAINT "fk_rails_53d51ce16a"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+[0m
+  ↳ db/migrate/20190224190257_add_author_to_books.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190224190257"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1258211116271132415)[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.9ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "First Author"], ["created_at", "2019-02-24 19:04:22.492639"], ["updated_at", "2019-02-24 19:04:22.492639"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Second Author"], ["created_at", "2019-02-24 19:04:22.536581"], ["updated_at", "2019-02-24 19:04:22.536581"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Create (0.3ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Third Author"], ["created_at", "2019-02-24 19:04:22.539303"], ["updated_at", "2019-02-24 19:04:22.539303"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:12
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (40.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "published_at", "created_at", "updated_at", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "1st book"], ["published_at", "2019-02-23 19:04:22.545474"], ["created_at", "2019-02-24 19:04:22.561628"], ["updated_at", "2019-02-24 19:04:22.561628"], ["author_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "published_at", "created_at", "updated_at", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "2nd book"], ["published_at", "2019-02-22 19:04:22.547415"], ["created_at", "2019-02-24 19:04:22.604817"], ["updated_at", "2019-02-24 19:04:22.604817"], ["author_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "published_at", "created_at", "updated_at", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "3rd book"], ["published_at", "2019-02-21 19:04:22.548253"], ["created_at", "2019-02-24 19:04:22.607278"], ["updated_at", "2019-02-24 19:04:22.607278"], ["author_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "published_at", "created_at", "updated_at", "author_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "4th book"], ["published_at", "2019-02-21 19:04:22.548788"], ["created_at", "2019-02-24 19:04:22.609736"], ["updated_at", "2019-02-24 19:04:22.609736"], ["author_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."author_id" = $1[0m  [["author_id", 3]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1258211116271132415)[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to AddGenreToBook (20190224192544)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "books" ADD "genre" character varying[0m
+  ↳ db/migrate/20190224192544_add_genre_to_book.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (41.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190224192544"]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (81.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (81.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1258211116271132415)[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ademicev/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBook Update (0.8ms)[0m  [1m[33mUPDATE "books" SET "updated_at" = $1, "genre" = $2 WHERE "books"."id" = $3[0m  [["updated_at", "2019-02-24 19:34:48.148796"], ["genre", "Fantasy"], ["id", 2]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."genre" = $1 LIMIT $2[0m  [["genre", "Fantasy"], ["LIMIT", 11]]
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."genre" = $1 LIMIT $2[0m  [["genre", "Fantasy"], ["LIMIT", 11]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."genre" = $1[0m  [["genre", "Fantasy"]]
+DEPRECATION WARNING: Delegating union to arel is deprecated and will be removed in Rails 6.0. (called from <main> at (pry):9)
+DEPRECATION WARNING: Delegating union to arel is deprecated and will be removed in Rails 6.0. (called from <main> at (pry):10)
+DEPRECATION WARNING: Delegating ast to arel is deprecated and will be removed in Rails 6.0. (called from <main> at (pry):10)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."genre" = $1 LIMIT $2[0m  [["genre", "Fantasy"], ["LIMIT", 11]]
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."genre" = $1 LIMIT $2[0m  [["genre", "Fantasy"], ["LIMIT", 11]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."genre" = $1[0m  [["genre", "Fantasy"]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."author_id" != $1[0m  [["author_id", 3]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."genre" = $1[0m  [["genre", "Fantasy"]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."author_id" != $1[0m  [["author_id", 3]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE ("books"."genre" = $1 OR "books"."author_id" != $2)[0m  [["genre", "Fantasy"], ["author_id", 3]]
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "authors" ON "authors"."id" = "books"."author_id" WHERE "authors"."name" != $1[0m  [["name", "Third Author"]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAuthor Create (41.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "4t Author"], ["created_at", "2019-02-24 20:08:02.677010"], ["updated_at", "2019-02-24 20:08:02.677010"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
