@@ -6,7 +6,7 @@ Ruby syntax - https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-C
 - Create a user in db:
 
   ```sudo su postgres -c "psql -c \"CREATE ROLE root SUPERUSER LOGIN PASSWORD 'ormlesson'\""```
-- Clone repo - ```git clone https://github.com/RoadToSoftwareFactory/swi2---2019```
+- Clone repo - ```git clone https://github.com/RoadToSoftwareFactory/swi2-2019```
 - ```cd swi2---2019/orm-lesson/```
 - ```bundle install``` (```bundle``` is a tool for managing dependencies)
 - Run ```rake db:setup``` (```rake``` is a build automation tool, similar to ```make``` :) )
