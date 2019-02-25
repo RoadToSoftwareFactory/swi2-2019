@@ -4,8 +4,8 @@ Ruby syntax - https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-C
 
 # Setup
 - Create a user in db ```sudo su postgres -c "psql -c \"CREATE ROLE root SUPERUSER LOGIN PASSWORD 'ormlesson'\""```
-- Clone repo - ```git clone ...```
-- ```cd orm-lesson/```
+- Clone repo - ```git clone https://github.com/RoadToSoftwareFactory/swi2---2019```
+- ```cd swi2---2019/orm-lesson/```
 - Run ```rake db:setup```
 
 
@@ -31,7 +31,7 @@ has_and_belongs_to_many
 
 In our example we'll use belongs_to
 
-SCHEME HERE
+![](https://guides.rubyonrails.org/images/belongs_to.png)
 
 To create an association you'd need to open the model file in ```app/models/``` and declare the book model this way:
 
