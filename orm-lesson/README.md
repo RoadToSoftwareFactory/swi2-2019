@@ -3,8 +3,8 @@
 Ruby syntax - https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-Cheatsheet.md
 
 # Setup
-- Create a user in db `
-``sudo su postgres -c "psql -c \"CREATE ROLE root SUPERUSER LOGIN PASSWORD 'ormlesson'\""```
+- Create a user in db 
+```sudo su postgres -c "psql -c \"CREATE ROLE root SUPERUSER LOGIN PASSWORD 'ormlesson'\""```
 - Clone repo - ```git clone https://github.com/RoadToSoftwareFactory/swi2---2019```
 - ```cd swi2---2019/orm-lesson/```
 - Run ```rake db:setup``` (```rake``` is a build automation tool, similar to ```make``` :) )
