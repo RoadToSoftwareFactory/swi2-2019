@@ -39,3 +39,32 @@ https://gitter.im/ManageIQ/welcome
 4. start VMs
 
 **POZOR: Pokud nechcete postup opakovat před každým cvičením, sedejte si vždy ke stejnému stroji!**
+
+---
+
+### UI
+
+Workshop items:
+
+* open http://www.pef.mendelu.cz/
+  * open the inspector, Elements tab
+  * change the background color of the menus
+
+* switch to the Console tab
+  * do the same thing using `$0`
+  * use `document.querySelectorAll` & CSS selectors
+
+* go to https://www.flickr.com/photos/christophebrutel/16534288912/sizes/l
+  * use the Elements pane to open the image file in a new tab
+
+* go to https://www.instagram.com/petitenanaland/, open a video
+  * find a `<video>` element (use `querySelector`), open the video with controls
+
+* go to https://www.fanfiction.net/
+  * find a story, try to copy text, fail
+  * read about the `user-select` CSS property, succeed
+
+* go to http://lamer.cz/
+  * see facebook buttons, and use the Network tab to block them
+
+* look into the Application tab - local storage & cookies, frames, styles, images
