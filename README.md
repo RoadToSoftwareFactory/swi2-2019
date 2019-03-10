@@ -12,8 +12,8 @@ This semester is structured as a set of topical workshops:
 |18.2|20.2|Development cycle|Bohdan Iakymets|
 |25.2|27.2|[ORM](http://foks.cz/swi/slides2019/orm/)|Libor Pichler, Alexander Demicev|
 |4.3|6.3|(null)|
-|11.3|13.3|Manager position|Jan Krocil|
-|18.3|20.3|UI|Martin Hradil|
+|11.3|13.3|UI|Martin Hradil|
+|18.3|20.3|Manager position|Jan Krocil|
 |25.3|27.3|UX|Tereza Novotna|
 |1.4|3.4|Tests with Selenium|Dmitrii Misharov|
 |8.4|10.4|DevOPS|Stano Ochotnicky|
