@@ -20,7 +20,7 @@ This semester is structured as a set of topical workshops:
 |15.4|17.4|API|Alexandre Vicenzi|
 |22.4|24.4|(Easter Holidays)|
 |29.4|1.5|Refactoring|Zita Nemeckova|
-|6.5|8.5|Documentation|Jaromir Hradilek|
+|6.5|15.5|Documentation|Jaromir Hradilek|
 
 
 **Communication channel:**
