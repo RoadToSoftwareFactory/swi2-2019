@@ -68,3 +68,29 @@ Workshop items:
   * see facebook buttons, and use the Network tab to block them
 
 * look into the Application tab - local storage & cookies, frames, styles, images
+
+### Refactoring
+
+Where can I get more info?
+
+* [Bad inspiration](https://github.com/Droogans/unmaintainable-code)
+
+* [What happened to other programmers](https://thedailywtf.com)
+
+* [What is the most evil code you have ever seen](https://stackoverflow.com/questions/434414/what-is-the-most-evil-code-you-have-ever-seen-in-a-production-enterprise-environ)
+
+* Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin 
+
+* Working Effectively with Legacy Code by Michael Feathers 
+
+Functions - Lets work with the worst controller
+
+* [The worst controller](https://github.com/ManageIQ/manageiq-ui-classic/blob/master/app/assets/javascripts/controllers/ems_common/ems_common_form_controller.js)
+
+* [Its template](https://github.com/ManageIQ/manageiq-ui-classic/blob/master/app/views/shared/views/ems_common/angular/_form.html.haml)
+
+Playing with Debride
+
+* clone [this repo](https://github.com/ManageIQ/manageiq-ui-classic)
+
+* install [debride](https://github.com/seattlerb/debride)
